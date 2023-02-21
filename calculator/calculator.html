@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../tailwind.css">
+    <title>Calculator 2</title>
+
+    <style>
+        .button0{
+            width: 90px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container px-4 mt-24">
+        <div class="w-1/5 mx-auto bg-gray-300 shadow-md">
+            <div class="w-full h-20 bg-white">
+                <div class="result w-full flex flex-col justify-center break-all">
+                    <div data-display1-op class="display1 text-right h-10 bg-white font-semibold pt-3 px-2"></div>
+                    <div data-display2-op class="display2 text-right h-10 bg-white font-semibold pt-2 px-2"></div>
+                </div>
+            </div>
+            <div class="buttons space-y-2 py-4">
+                <div class="flex justify-around">
+                    <button class="button border h-8 w-10 bg-gray-800 text-sm text-white shadow-md bg-opacity-80 hover:bg-opacity-70 transform transition-all duration-400">MC</button>
+                    <button class="button border h-8 w-10 bg-gray-800 text-sm text-white shadow-md bg-opacity-80 hover:bg-opacity-70 transform transition-all duration-400">MR</button>
+                    <button class="button border h-8 w-10 bg-gray-800 text-sm text-white shadow-md bg-opacity-80 hover:bg-opacity-70 transform transition-all duration-400">MS</button>
+                    <button class="button border h-8 w-10 bg-gray-800 text-sm text-white shadow-md bg-opacity-80 hover:bg-opacity-70 transform transition-all duration-400">M+</button>
+                    <button class="button border h-8 w-10 bg-gray-800 text-sm text-white shadow-md bg-opacity-80 hover:bg-opacity-70 transform transition-all duration-400">M-</button>
+                </div>
+                <div class="flex justify-around">
+                    <button data-delete class="button border h-8 w-10 bg-gray-800 text-sm text-white shadow-md bg-opacity-80 hover:bg-opacity-70 transform transition-all duration-400">&larr;</button>
+                    <button class="button border h-8 w-10 bg-gray-800 text-sm text-white shadow-md bg-opacity-80 hover:bg-opacity-70 transform transition-all duration-400">CE</button>
+                    <button data-all-clear class="button border h-8 w-10 bg-gray-800 text-sm text-white shadow-md bg-opacity-80 hover:bg-opacity-70 transform transition-all duration-400">C</button>
+                    <button class="button border h-8 w-10 bg-gray-800 text-sm text-white shadow-md bg-opacity-80 hover:bg-opacity-70 transform transition-all duration-400">&#xB1;</button>
+                    <button data-operation class="button border h-8 w-10 bg-gray-800 text-sm text-white shadow-md bg-opacity-80 hover:bg-opacity-70 transform transition-all duration-400">&radic;</button>
+                </div>
+                <div class="flex justify-around">
+                    <button data-number class="button border h-8 w-10 bg-gray-800 text-sm text-white shadow-md bg-opacity-80 hover:bg-opacity-70 transform transition-all duration-400">7</button>
+                    <button data-number class="button border h-8 w-10 bg-gray-800 text-sm text-white shadow-md bg-opacity-80 hover:bg-opacity-70 transform transition-all duration-400">8</button>
+                    <button data-number class="button border h-8 w-10 bg-gray-800 text-sm text-white shadow-md bg-opacity-80 hover:bg-opacity-70 transform transition-all duration-400">9</button>
+                    <button data-operation class="button border h-8 w-10 bg-gray-800 text-sm text-white shadow-md bg-opacity-80 hover:bg-opacity-70 transform transition-all duration-400">/</button>
+                    <button data-operation class="button border h-8 w-10 bg-gray-800 text-sm text-white shadow-md bg-opacity-80 hover:bg-opacity-70 transform transition-all duration-400">%</button>
+                </div>
+                <div class="flex justify-around">
+                    <button data-number class="button border h-8 w-10 bg-gray-800 text-sm text-white shadow-md bg-opacity-80 hover:bg-opacity-70 transform transition-all duration-400">4</button>
+                    <button data-number class="button border h-8 w-10 bg-gray-800 text-sm text-white shadow-md bg-opacity-80 hover:bg-opacity-70 transform transition-all duration-400">5</button>
+                    <button data-number class="button border h-8 w-10 bg-gray-800 text-sm text-white shadow-md bg-opacity-80 hover:bg-opacity-70 transform transition-all duration-400">6</button>
+                    <button data-operation class="button border h-8 w-10 bg-gray-800 text-sm text-white shadow-md bg-opacity-80 hover:bg-opacity-70 transform transition-all duration-400">*</button>
+                    <button class="button border h-8 w-10 bg-gray-800 text-sm text-white shadow-md bg-opacity-80 hover:bg-opacity-70 transform transition-all duration-400">1/x</button>
+                </div>
+                <div class="flex justify-between px-1.5">
+                    <div class="space-y-1.5">
+                        <div class="flex gap-2.5">
+                            <button data-number class="button border h-8 w-10 bg-gray-800 text-sm text-white shadow-md bg-opacity-80 hover:bg-opacity-70 transform transition-all duration-400">1</button>
+                            <button data-number class="button border h-8 w-10 bg-gray-800 text-sm text-white shadow-md bg-opacity-80 hover:bg-opacity-70 transform transition-all duration-400">2</button>
+                            <button data-number class="button border h-8 w-10 bg-gray-800 text-sm text-white shadow-md bg-opacity-80 hover:bg-opacity-70 transform transition-all duration-400">3</button>
+                            <button data-operation class="button border h-8 w-10 bg-gray-800 text-sm text-white shadow-md bg-opacity-80 hover:bg-opacity-70 transform transition-all duration-400">-</button>
+                        </div>
+                        
+                       <div class="flex gap-2.5">
+                            <button data-number class="button border h-8 button0 bg-gray-800 text-sm text-white shadow-md bg-opacity-80 hover:bg-opacity-70 transform transition-all duration-400">0</button>
+                            <button data-number class="button border h-8 w-10 bg-gray-800 text-sm text-white shadow-md bg-opacity-80 hover:bg-opacity-70 transform transition-all duration-400">.</button>
+                            <button data-operation class="button border h-8 w-10 bg-gray-800 text-sm text-white shadow-md bg-opacity-80 hover:bg-opacity-70 transform transition-all duration-400">+</button>
+                       </div>
+                    </div>
+
+                    <button data-equals class="button border h-100% w-10 bg-gray-800 text-sm text-white shadow-md bg-opacity-80 hover:bg-opacity-70 transform transition-all duration-400">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../calculator.js"></script>
+
+</body>
+</html>
